@@ -1,0 +1,26 @@
+body {
+  position: relative;
+  top: 50px;
+}
+
+#timer, #title {
+  position: absolute;
+  color: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 50px;
+  filter: brightness(2);
+}
+
+#title {
+  top: 250px;
+}
+
+#timer {
+  bottom: 250px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
