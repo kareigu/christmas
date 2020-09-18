@@ -1,10 +1,16 @@
 const express = require('express');
+const https = require('https');
 const app = express();
 const ejs = require('ejs');
 const fs = require('fs');
 const port = 5500;
 
 app.use(express.static(__dirname + '/public'));
+
+const creds = {
+    key: fs.readFileSync('./certs/key.pem', 'utf8'),
+    cert: fs.readFileSync('./certs/cert.pem', 'utf8')
+}
 
 app.get('/', (req, res) => {
 	const now = Date.now();
@@ -20,7 +26,9 @@ app.get('/', (req, res) => {
 	});
 	});
 
-app.listen(port, err => {
+
+const httpsServer = https.createServer(creds, app)
+httpsServer.listen(port, err => {
 	if (err)
 		throw err;
 	else
