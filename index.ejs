@@ -1,14 +1,32 @@
 <html>
   <head>
-    <title>Time until christmas</title>
+	<!-- HTML Meta Tags -->
+	<title>Time until christmas</title>
+	<meta name="description" content="<%=days%> days">
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://christmas.mxrr.dev/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Time until christmas">
+	<meta property="og:description" content="<%=days%> days">
+	<meta property="og:image" content="https://ngang.cc/files/skeleHit.gif">
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="christmas.mxrr.dev">
+	<meta property="twitter:url" content="https://christmas.mxrr.dev/">
+	<meta name="twitter:title" content="Time until christmas">
+	<meta name="twitter:description" content="<%=days%> days">
+	<meta name="twitter:image" content="https://ngang.cc/files/skeleHit.gif">
+
+	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+      
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="container">
       <h1 id="title">TIME UNTIL CHRISTMAS:</h1>
-      <% if(days && hours){ %>
-        <h2 id="timer"><%=days%> days, <%=hours%> hours</h2>
-      <%}%>
+       <h2 id="timer"><%=days%> days, <%=hours%> hours</h2>
       <img class="image" src="christmas.gif">
     </div>
   </body>

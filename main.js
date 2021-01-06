@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 	const curYear = new Date().getFullYear();
 	const christmas = new Date(`12/24/${curYear}`);
 	const days = Math.floor((christmas.getTime() - now) / (1000 * 3600 * 24));
-	const hours = Math.floor((christmas.getTime() - now) / (1000 * 3600 * 24 * 60));
+	const hours = Math.floor(((christmas.getTime() - now) / (1000 * 3600 * 24) * 24) - (days * 24));
 	ejs.renderFile('./index.ejs', { days, hours }, (err, template) => {
 		if (err)
 			throw err;
