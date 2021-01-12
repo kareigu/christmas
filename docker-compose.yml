@@ -1,0 +1,7 @@
+services:
+  webserver:
+    image: mxr/christmas-app
+    container_name: christmas_app
+    ports:
+      - 5500:5500
+    restart: unless-stopped
